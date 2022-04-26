@@ -3,6 +3,8 @@ def find_shortest_string_recursive(arr)
 
   result = find_shortest_string_recursive(arr[1..-1])
 
+  # if the first item of the array is shorter than the next item, then return that item
+  # else return the result which is a recursive result of the next item in the array
   arr.first.length <= result.length ? arr.first : result
 end
 
